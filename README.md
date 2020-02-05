@@ -9,7 +9,7 @@
 
 # How to use
 - Extract the zip contents, make sure all the files are in same folder
-- Copy the files from meta folder into 'MetaFolder\'
+- Copy the files from meta folder into `MetaFolder\`
 - Open the run-program.bat file
 - Enter the full path to the excel file example `F:\files-filter-excel\excel_file.xslx`
 - Enter the specefic sheet name example `sheet1`
