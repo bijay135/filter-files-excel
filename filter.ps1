@@ -1,7 +1,7 @@
 ﻿$excelFile = Read-Host -Prompt "Input your full excel file path"
 $excelSheet = Read-Host -Prompt "Input your excel sheet name"
 $metaFolder = ".\MetaFolder"
-$filteredFolder = ".\FilteredFolder"
+$filteredFolder = Read-Host -Prompt "Input your folder to put filtered files into"
 
 $excel = New-Object -comobject Excel.Application
 $workbook = $excel.Workbooks.Open($excelFile)
