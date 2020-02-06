@@ -11,7 +11,7 @@ $workSheet.Name
 $excelNames = @()
 $i = 2
 while ($worksheet.Cells.Item($i, 2).Value() -ne $null) {
-    $excelNames += $worksheet.Cells.Item($i, 2).Value()
+    $excelNames += $worksheet.Cells.Item($i, 2).Value().Trim()
     $i++
 }
    
