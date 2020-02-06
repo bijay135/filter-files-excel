@@ -8,10 +8,10 @@ $workbook = $excel.Workbooks.Open($excelFile)
 $worksheet = $workbook.Worksheets.Item($excelSheet)
 $workSheet.Name
 
-$imageNames = @()
+$excelNames = @()
 $i = 2
 while ($worksheet.Cells.Item($i, 2).Value() -ne $null) {
-    $imageNames += $worksheet.Cells.Item($i, 2).Value()
+    $excelNames += $worksheet.Cells.Item($i, 2).Value()
     $i++
 }
    
@@ -25,7 +25,7 @@ $excel.Quit()
 [System.GC]::WaitForPendingFinalizers()
 
 Get-ChildItem -Path $metaFolder |
-  Where-Object { $imageNames -contains $_.Name } |
+  Where-Object { $excelNames -contains $_.Name } |
   Move-Item -Destination $filteredFolder -verbose
 
 Write-Output "All files successfully moved"
